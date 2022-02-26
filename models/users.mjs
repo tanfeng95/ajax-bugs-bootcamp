@@ -1,29 +1,17 @@
-export default function bugsModel(sequelize, DataTypes) {
-  return sequelize.define('bugs', {
+export default function usersModel(sequelize, DataTypes) {
+  return sequelize.define('users', {
     id: {
       allowNull: false,
       autoIncrement: true,
       primaryKey: true,
       type: DataTypes.INTEGER,
     },
-    problem: {
+    email: {
       allowNull: false,
       type: DataTypes.STRING,
     },
-    error_text: {
-      allowNull: true,
-      type: DataTypes.STRING,
-    },
-    feature_id: {
-      allowNull: true,
-      type: DataTypes.INTEGER,
-    },
-    user_id: {
-      allowNull: true,
-      type: DataTypes.INTEGER,
-    },
-    commit: {
-      allowNull: true,
+    password: {
+      allowNull: false,
       type: DataTypes.STRING,
     },
     created_at: {
